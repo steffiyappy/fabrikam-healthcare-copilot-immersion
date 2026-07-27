@@ -823,101 +823,48 @@ Show each artefact before finalising. Do not send the announcement without my ap
 </section>
 
 <section id="ex7">
-<div class="modulehead"><div class="num">7</div><h2>Exercise 7 &middot; Copilot Chat &middot; Daily Briefing Kanban<small>15 min &middot; Copilot Chat &middot; Synthesise the morning intake into a live HTML kanban board</small></h2></div>
-<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>. This exercise uses <b>Copilot Chat with Work grounding</b> across four source files. No prior exercise output required &mdash; this is a standalone morning-of-day workflow you can run any working day.</div>
+<div class="modulehead"><div class="num">7</div><h2>Exercise 7 &middot; Copilot Chat &middot; Daily Briefing Kanban<small>10 min &middot; Copilot Chat &middot; Your morning in one page</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>. Make sure the mode selector shows <b>Work</b>. No files to attach &mdash; Copilot reads your email, Teams, calendar, and files automatically.</div>
 
 <div class="card">
-<p class="lead">Every morning the Head of Internal Audit (or Risk Manager on duty) triages the overnight intake &mdash; new incidents, failed control tests, regulator alerts, overdue management actions, and escalations from the business. The goal of this exercise: instead of reading four files in four tabs, ask Copilot Chat to synthesise the intake into a single <b>HTML kanban board</b> you can paste into a Loop page, a Teams tab, or your daily standup. The board becomes the single source of truth for the day.</p>
-
-<h4>What the kanban should show</h4>
-<ul>
-  <li>&#128680; <b>Needs Attention Today</b> &mdash; net-new items in the last 24&ndash;48 hours that require a decision from the RM/IA lead</li>
-  <li>&#128260; <b>Under Review</b> &mdash; items already assigned but awaiting evidence, testing, or a management response</li>
-  <li>&#9203; <b>Waiting on Owner</b> &mdash; items where the ball is with a business owner (overdue actions, chasers)</li>
-  <li>&#9989; <b>Cleared / Closed Today</b> &mdash; items that moved to Closed in the last 24 hours &mdash; celebrate the wins</li>
-  <li>&#128200; <b>Watchlist</b> &mdash; items with no action required today, but trending in the wrong direction</li>
-</ul>
-
-<div class="callout"><b>Sources for this exercise:</b> <b>01_Fabrikam_Enterprise_Risk_Register.xlsx</b>, <b>02_Fabrikam_Control_Testing_Results.xlsx</b>, <b>03_Fabrikam_Incident_Log.xlsx</b>, <b>06_Fabrikam_Prior_Year_Audit_Report.docx</b> &mdash; all pre-loaded in the workshop tenant OneDrive.</div>
+<p class="lead">The morning triage across Outlook, Teams, and your calendar takes 20 minutes. This exercise turns it into one prompt and one HTML page you can pin to a Teams tab or open on a second monitor. Run it every morning.</p>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 7.1</span><span class="time">8 min</span><span class="file">&#128172; Copilot Chat &middot; Ground &amp; generate</span></div>
-  <h4>Ask Copilot Chat to build the daily briefing kanban</h4>
-  <p>In <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>, make sure <b>Work</b> mode is selected (not Web). Type <code>/</code> and attach the four source files one by one. Then paste the full prompt below. This is the hero prompt for this exercise &mdash; do not shorten it, the structure is what forces Copilot to produce a well-organised board.</p>
-  <div class="prompt">You are my Risk Management &amp; Internal Audit chief-of-staff at Fabrikam Healthcare. Produce my <b>Daily RM/IA Briefing</b> for today as a <b>self-contained HTML kanban board</b> that I can paste into a Loop page or Teams tab.
+  <div class="head"><span class="num">Task 7.1</span><span class="time">5 min</span><span class="file">&#128172; Ask Copilot for your day</span></div>
+  <h4>Type this in Copilot Chat</h4>
+  <p>Just paste. No files needed &mdash; Copilot looks at your inbox, Teams, calendar, and recent files on its own.</p>
+  <div class="prompt">Give me my daily briefing as a kanban board in HTML.
 
-Ground your answer strictly in these four files (already attached):
-- 01_Fabrikam_Enterprise_Risk_Register.xlsx &mdash; enterprise risks with inherent/residual scores, owners, and last-review dates
-- 02_Fabrikam_Control_Testing_Results.xlsx &mdash; FY26 control tests with test result (Pass / Pass with Exception / Fail), tester, tested date, and remediation status
-- 03_Fabrikam_Incident_Log.xlsx &mdash; 12-month incident register with severity, status, reported date, closed date, and root-cause category
-- 06_Fabrikam_Prior_Year_Audit_Report.docx &mdash; open findings from the FY25 audit with rating, agreed action, action owner, target date, and current status
+Look at my email, Teams chats and channels, calendar, and recent files from the last 24 hours. Use 5 columns: Needs my decision today, In progress, Waiting on others, FYI, Closed yesterday.
 
-Rules of construction:
-1. Treat &ldquo;today&rdquo; as the latest date present in the incident log. Anything reported / tested / opened in the last <b>7 calendar days</b> up to that date counts as recent.
-2. Do not invent items. Every card on the board must map to a specific row in one of the four files. Cite the source with the row identifier in the card footer (e.g. &ldquo;Incident INC-2026-042 &middot; row 44 of Incident Log&rdquo;).
-3. Prioritise by impact. Critical / High-rated items rank above Medium / Low regardless of recency.
-4. Deduplicate. If the same underlying issue appears in multiple files (e.g. a Failed control test that also triggered an incident), show it once in the most actionable column and cross-reference the other source in the card footer.
-5. Escalations first. Any Overdue management action, any Failed control, and any Severity-1 open incident must appear in the <b>Needs Attention Today</b> column.
+Skip newsletters and auto-replies. For each card show: what it is, who&rsquo;s asking, when it&rsquo;s due, and what I should do next. Cite the email subject or Teams post so I can find it.
 
-Board structure &mdash; produce exactly these 5 columns, in this order:
-  &#128680; Needs Attention Today &mdash; the RM/IA lead must make a decision today
-  &#128260; Under Review &mdash; work in flight, evidence being gathered
-  &#9203; Waiting on Owner &mdash; ball is with the business, chase if overdue
-  &#9989; Cleared / Closed Today &mdash; items closed in the last 24 hours
-  &#128200; Watchlist &mdash; trend / no action today
-
-For each card, use this exact structure:
-  &middot; <b>Card title</b> (max 12 words, action-oriented)
-  &middot; One-line context (max 20 words) &mdash; what the item is and why it matters now
-  &middot; Rating badge (Critical / High / Medium / Low)
-  &middot; Owner (role, not name &mdash; e.g. &ldquo;DPO&rdquo;, &ldquo;CFO&rdquo;, &ldquo;Head of Clinical Ops&rdquo;)
-  &middot; Due date or SLA countdown (e.g. &ldquo;Due in 2 days&rdquo;, &ldquo;Overdue by 5 days&rdquo;)
-  &middot; Suggested next step (one imperative sentence &mdash; what should the RM/IA lead <em>do</em> before end of day)
-  &middot; Source citation (file &middot; row / section)
-
-Volume: aim for <b>12&ndash;18 cards total</b> across the board. Do not pad. If a column has zero items, still render the column with a placeholder card that says &ldquo;Nothing new today&rdquo;.
-
-HTML output requirements (this is a strict spec &mdash; follow it exactly):
-- Return the response as <b>one single &lt;html&gt; document</b> inside a code block, ready to paste and open.
-- Include a &lt;style&gt; block. Use the Fabrikam Healthcare palette: navy #0f2545 (header band, dark text), teal #0e7490 (accent), off-white #f8fafc (page background), white cards, subtle shadow. Segoe UI font stack.
-- Layout: 5 columns as flex items, each column has a coloured header strip (red for Needs Attention, teal for Under Review, amber for Waiting on Owner, green for Cleared, slate for Watchlist).
-- Each card is a rounded rectangle (radius 8px) with the rating badge as a small pill in the top-right corner. Badge colours: Critical = #b91c1c, High = #d97706, Medium = #0e7490, Low = #64748b.
-- Above the board, include a slim header with: today&rsquo;s date (the &ldquo;today&rdquo; you inferred from the data), the total card count, and a one-sentence &ldquo;top-of-mind for the CAE&rdquo; summary sentence generated from the Needs Attention column.
-- Below the board, include a compact footer with: &ldquo;Sources: [list of the four filenames]&rdquo; and the note &ldquo;Generated by M365 Copilot &mdash; illustrative workshop data, not for operational use.&rdquo;
-- Fully self-contained. No external CSS, no external images, no JavaScript, no CDN links. Must render offline when saved as a .html file.
-- Responsive: on screens narrower than 1000px, columns stack vertically.
-
-After the HTML code block, add a short plain-text section titled <b>&ldquo;How I built this&rdquo;</b> &mdash; 4&ndash;6 bullets covering: the &ldquo;today&rdquo; date I inferred, how I resolved duplicates, which items I promoted from Watchlist to Needs Attention and why, and any data-quality issues I noticed in the source files that you should chase up. This is my audit trail &mdash; be specific.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout"><b>Save the output:</b> Copilot will return one HTML block plus the &ldquo;How I built this&rdquo; audit trail. Copy the HTML into a new file called <b>Fabrikam_Daily_RMIA_Briefing.html</b> on your desktop and double-click to open in your browser. This is your morning board.</div>
+Give me one self-contained HTML file I can save and open in a browser.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>Save it:</b> Copy the HTML into a file called <b>My_Daily_Briefing.html</b> on your desktop and double-click to open. That&rsquo;s your board for the day.</div>
 </div>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 7.2</span><span class="time">4 min</span><span class="file">&#128269; Review the board like an auditor</span></div>
-  <h4>Interrogate what Copilot produced &mdash; do not just admire the output</h4>
-  <p>The board looks convincing. Your job is to verify it. Work through this checklist before you show it to anyone:</p>
+  <div class="head"><span class="num">Task 7.2</span><span class="time">3 min</span><span class="file">&#128269; Sanity check</span></div>
+  <h4>Quick review before you act on it</h4>
   <ul>
-    <li><b>Citations:</b> Pick any 3 cards. Can you find the exact row in the source file that produced the card? If a citation is vague (&ldquo;Incident Log&rdquo; with no row number), reject and ask Copilot to redo with row-level citations.</li>
-    <li><b>Deduplication:</b> Is the same underlying issue on the board twice under different names? Failed control tests often mirror an incident &mdash; they should appear once.</li>
-    <li><b>Ratings:</b> Does every <em>Critical</em> or <em>High</em> item live in <em>Needs Attention Today</em>? If a High-rated item is buried in the Watchlist, that is a triage bug &mdash; ask Copilot to fix.</li>
-    <li><b>Owner assignments:</b> Every card must name a role. If a card says &ldquo;Owner: TBD&rdquo; or leaves it blank, that is a data-quality flag &mdash; add it to the &ldquo;chase-up&rdquo; list.</li>
-    <li><b>Next-step imperatives:</b> Read the &ldquo;Suggested next step&rdquo; on each Needs Attention card. Is it actually actionable today? If it says &ldquo;Continue monitoring&rdquo;, reject &mdash; monitoring is not a decision.</li>
+    <li>Pick 2 cards &mdash; can you find the exact email or Teams post from the citation?</li>
+    <li>Is anything urgent buried in the wrong column? Tell Copilot: <em>&ldquo;Move [item] to Needs my decision.&rdquo;</em></li>
+    <li>Any newsletters or noise sneaking through? Tell Copilot: <em>&ldquo;Remove newsletters and auto-replies and regenerate.&rdquo;</em></li>
   </ul>
-  <div class="callout warn"><b>Common failure mode:</b> Copilot will occasionally fabricate a plausible-looking incident ID or control reference that does not exist in the source files. Row-level citations force it to ground every card &mdash; that is why we make citations mandatory.</div>
 </div>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 7.3</span><span class="time">3 min</span><span class="file">&#128737;&#65039; Extend the board</span></div>
-  <h4>Ask a follow-up to make the board more useful</h4>
-  <p>Pick one of the follow-ups below &mdash; do not do all three. The point is to see how Copilot Chat iterates on the same grounded context without you re-attaching the files.</p>
-  <div class="prompt">Regenerate the same kanban HTML, but add a 6th column at the far left called &ldquo;&#127775; Escalate to Audit Committee&rdquo;. Populate it with any item where (a) the rating is Critical AND the action is Overdue, OR (b) the same root-cause category has appeared 3 or more times across the incident log in the last 90 days. Show the count in the column header. Cite every card as before.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="prompt">Take the current kanban and produce a <b>2-minute stand-up script</b> below the board &mdash; what the Head of Internal Audit would read out at the 09:00 daily huddle. Structure: (1) &ldquo;Top of mind&rdquo; &mdash; one sentence, (2) &ldquo;Three items I need decisions on&rdquo; &mdash; three bullets from the Needs Attention column with the ask stated as a yes/no question, (3) &ldquo;Wins from yesterday&rdquo; &mdash; two bullets from the Cleared column, (4) &ldquo;Ask of the room&rdquo; &mdash; one bullet identifying which business owner needs to be chased. Total under 200 words.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="prompt">Rebuild the kanban as a <b>weekly outlook</b> instead of a daily briefing &mdash; same 5 columns, but now &ldquo;today&rdquo; becomes the current week and cards represent items due, tested, or reported in the last 7 days vs the coming 7 days. Add a small trend indicator on each card: &#11014;&#65039; (worse than last week), &#11015;&#65039; (better), &#8213; (unchanged). Ground the trend in the actual data &mdash; do not guess.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout good"><b>Why this exercise matters:</b> The kanban replaces four spreadsheets and a Word doc with one HTML page you can paste into Loop, embed in a Teams tab, or open on a wall screen at the daily huddle. It is the fastest &ldquo;show me what changed overnight&rdquo; artefact you can produce with Copilot Chat &mdash; and because every card is cited to source, it is defensible when the Audit Committee asks how you triaged the week.</div>
+  <div class="head"><span class="num">Task 7.3</span><span class="time">2 min</span><span class="file">&#128737;&#65039; Make it yours</span></div>
+  <h4>Try one follow-up</h4>
+  <p>Pick one &mdash; don&rsquo;t do all three.</p>
+  <div class="prompt">Add a column at the far left for anything from a C-level or anything marked urgent.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="prompt">Below the board, write a 2-minute stand-up script I can read to my team at 9am.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="prompt">Redo this as a Friday wrap-up covering the whole week instead of just today.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout good"><b>Why this matters:</b> 20 minutes of triage becomes 90 seconds. Run it every Monday morning after a busy weekend and you&rsquo;ll never go back.</div>
 </div>
 
 </div>
 </section>
-
 <section id="files">
 <div class="modulehead"><div class="num">&#128193;</div><h2>Sample Files<small>Illustrative Fabrikam Healthcare data &mdash; workshop use only</small></h2></div>
 <div class="card">
