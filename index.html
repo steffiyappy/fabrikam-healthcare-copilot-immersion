@@ -154,6 +154,7 @@ td a:hover{color:var(--accent2)}
     <a href="#ex3">Exercise 3 &middot; PowerPoint</a>
     <a href="#ex4">Exercise 4 &middot; Outlook &amp; Teams</a>
     <a href="#ex5">Exercise 5 &middot; Agent Builder</a>
+    <a href="#ex6">Exercise 6 &middot; Copilot Cowork</a>
     <h3>Resources</h3>
     <a href="#files">Sample files</a>
     <a href="#tips">Tips &amp; prompts</a>
@@ -732,6 +733,91 @@ Tone: professional and concise. Maximum 250 words. Suitable for senior risk mana
   <div class="callout good">&#127881; You&rsquo;ve built a working AI agent in under 20 minutes &mdash; grounded on your real audit documents, citing sources, running 24/7 for your entire team. Update the knowledge source whenever the charter or register changes &mdash; the agent stays current.</div>
 </div>
 </div>
+</div>
+</section>
+
+<section id="ex6">
+<div class="modulehead"><div class="num">6</div><h2>Exercise 6 &middot; Copilot Cowork<small>25 min &middot; Cowork &middot; Delegate multi-step audit work end-to-end</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> and switch to <b>Cowork</b> mode from the mode selector at the top of the chat. Cowork will show its plan before it acts &mdash; approve each step, or let it run end-to-end while you observe.</div>
+
+<div class="card">
+<p class="lead">Copilot <b>Cowork</b> is a multi-step agentic mode where you describe an <b>outcome</b> &mdash; and Copilot writes a plan, then executes across Word, Excel, PowerPoint, Outlook, Teams, and the browser to produce the deliverables. Instead of prompting one app at a time, you delegate the entire workflow. Perfect for the &ldquo;last mile&rdquo; of an audit engagement &mdash; where the report, deck, tracker, briefing page, sign-off email, and Audit Committee invite all need to land together.</p>
+
+<h4>What Cowork produces in this exercise</h4>
+<ul>
+  <li>&#128221; <b>Word</b> &mdash; a 1-page Audit Committee cover memo</li>
+  <li>&#128202; <b>Excel</b> &mdash; the management action tracker (findings, owners, due dates, status)</li>
+  <li>&#127912; <b>PowerPoint</b> &mdash; a 5-slide Audit Committee summary deck</li>
+  <li>&#127760; <b>HTML</b> &mdash; a Copilot Page shared to the Risk &amp; Audit Team channel as a live briefing</li>
+  <li>&#128231; <b>Email</b> &mdash; a sign-off request sent to the CFO, CIO, and DPO with the deliverables attached</li>
+  <li>&#128197; <b>Meeting</b> &mdash; the Audit Committee readout scheduled in Outlook with the deck attached and Teams link</li>
+</ul>
+
+<div class="callout"><b>Prerequisites:</b> Complete Exercises 1&ndash;4 first so the Word audit report, Excel control-testing results, and PowerPoint deck are already saved in your OneDrive. Cowork will reference them by name.</div>
+
+<div class="activity">
+  <div class="head"><span class="num">Task 6.1</span><span class="time">5 min</span><span class="file">&#128101; Cowork &middot; Plan</span></div>
+  <h4>Delegate the full Audit Committee close-out to Cowork</h4>
+  <p>In Copilot chat, switch mode to <b>Cowork</b>. Paste the prompt below. Cowork will read your files, propose a step-by-step plan across the 6 deliverables, and ask you to approve before it starts executing. Review the plan carefully &mdash; edit any step that is off, then approve.</p>
+  <div class="prompt">Cowork &mdash; close out the FY26 Patient Data Privacy Internal Audit and prepare the full Audit Committee readout package.
+
+Reference these files in my OneDrive:
+- Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx (the full audit report I drafted in Exercise 1)
+- 02 Fabrikam_Control_Testing_Results.xlsx (control testing evidence)
+- 03 Fabrikam_Incident_Log.xlsx (12-month incident history)
+- 04 Fabrikam_Internal_Audit_Charter.docx (rating scale and methodology)
+
+Produce all six deliverables below. Work through them in order, save each to my OneDrive in the folder "/Audits/FY26 Patient Data Privacy/Audit Committee Pack/", and show me each artefact before moving to the next step.
+
+1. WORD &mdash; Create "01 Audit Committee Cover Memo.docx". One page. From the Head of Internal Audit to the Audit Committee Chair. Sections: purpose, audit opinion (one word + one paragraph rationale), summary of findings by rating (count of Critical / High / Medium / Low), management response status, and recommended Committee action. Grounded strictly in the source audit report &mdash; do not invent findings, ratings, or dates.
+
+2. EXCEL &mdash; Create "02 Management Action Tracker.xlsx". Columns: Finding ID, Finding Title, Rating, Root Cause Category, Management Action, Action Owner (role), Target Date, Current Status (Not Started / In Progress / Complete / Overdue), % Complete, Last Update Note. Populate one row per finding extracted from the audit report. Add a summary tab with a pivot: count of actions by Status and by Rating. Apply conditional formatting: red for Overdue, amber for In Progress with due date in next 14 days, green for Complete.
+
+3. POWERPOINT &mdash; Create "03 Audit Committee Summary.pptx". Five slides: (1) Title &amp; Agenda, (2) Audit Opinion + rationale, (3) Findings by rating (chart from the tracker), (4) Top 3 findings (one bullet each: what/why/action/owner), (5) Ask of the Committee. Fabrikam Healthcare palette: navy #0f2545 header band, teal #0e7490 accent, Segoe UI, minimal text, one visual per slide. Add speaker notes with the key message and anticipated Committee question for each slide.
+
+4. HTML &mdash; Create a Copilot Page titled "FY26 Patient Data Privacy Audit &mdash; Committee Briefing". Embed: the audit opinion at the top, the findings-by-rating chart, a live-linked view of the action tracker, and a 3-bullet "what changed since last Committee" section. Share the page with the Risk &amp; Audit Team channel in Teams (view access) so members can follow the readout live.
+
+5. EMAIL &mdash; Draft in Outlook (do not send yet &mdash; show me the draft first). To: CFO, CIO, DPO. Cc: Head of Internal Audit, Audit Committee Chair. Subject: "Sign-off requested &mdash; FY26 Patient Data Privacy Audit &mdash; Audit Committee Pack". Body: 4 short paragraphs &mdash; purpose, deliverables attached, action requested (review and sign-off by [target date]), and escalation path if any deliverable is disputed. Attach the Word memo, Excel tracker, and PowerPoint deck. Tone: formal, audit-appropriate, maximum 180 words.
+
+6. MEETING &mdash; Schedule an Outlook meeting titled "Audit Committee Readout &mdash; FY26 Patient Data Privacy Audit". 45 minutes. Find a slot in the next 10 business days that works for the Audit Committee Chair, CFO, CIO, DPO, and Head of Internal Audit &mdash; propose the top 3 options first. Include a Teams link. Attach the PowerPoint deck and link to the Copilot Page. Agenda in the body: (1) audit opinion, (2) findings walkthrough, (3) management action commitments, (4) Committee questions, (5) formal sign-off.
+
+Rules for the whole plan:
+- Do not send the email or send the meeting invite until I explicitly approve each one &mdash; show drafts first.
+- Do not invent findings, dates, owners, or regulatory clauses. If information is missing from the source files, flag it and ask me before proceeding.
+- Cite the source file and section for every finding, rating, and date used.
+- Save each artefact with the exact filename above so they can be attached to the email and meeting.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>What Cowork will do:</b> It shows a numbered plan with the 6 steps, the tool it will use for each (Word, Excel, PowerPoint, Loop/Pages, Outlook mail, Outlook calendar), and a checkpoint after each step. Click <b>Approve plan</b> to start &mdash; or edit any step first.</div>
+  <div class="callout warn"><b>Watch for these checkpoints:</b> Cowork will pause and ask you to confirm before (a) sharing the HTML page to the Teams channel, (b) sending the sign-off email, and (c) sending the meeting invite. These are the three &ldquo;send&rdquo; actions with external impact &mdash; never let Cowork run past these without a human review.</div>
+</div>
+
+<div class="activity">
+  <div class="head"><span class="num">Task 6.2</span><span class="time">10 min</span><span class="file">&#9989; Cowork &middot; Review &amp; approve each step</span></div>
+  <h4>Review each artefact before Cowork moves on</h4>
+  <p>Cowork will produce each deliverable and pause. Use this checklist as you go &mdash; do not just click Approve.</p>
+  <ul>
+    <li><b>Word memo:</b> Does the audit opinion match the source report exactly? Are finding counts (Critical / High / Medium / Low) correct? Any invented dates or numbers?</li>
+    <li><b>Excel tracker:</b> Is every finding from the source report represented (no missing rows)? Are owners assigned by <em>role</em> not name? Does the conditional formatting work as expected?</li>
+    <li><b>PowerPoint deck:</b> Does the chart on slide 3 match the tracker? Are the top-3 findings on slide 4 actually the highest-rated (not the first 3)? Are speaker notes present?</li>
+    <li><b>HTML page:</b> Is the audit opinion legible above the fold? Is the tracker <em>linked</em> (live view) rather than pasted as a static screenshot? Is the sharing scope correct (Risk &amp; Audit team only, not org-wide)?</li>
+    <li><b>Email draft:</b> Is the recipient list correct (CFO / CIO / DPO in To, not Cc)? Are all three attachments present? Is the sign-off deadline stated?</li>
+    <li><b>Meeting invite:</b> Are all required attendees included? Is the Teams link present? Is the agenda in the body (not just the subject)?</li>
+  </ul>
+  <div class="callout good"><b>Approve, edit, or reject each step:</b> If a step is off, tell Cowork exactly what to change (e.g., &ldquo;Regenerate the Excel tracker &mdash; you missed finding F-07&rdquo;) and it will redo just that step without restarting the whole plan.</div>
+</div>
+
+<div class="activity">
+  <div class="head"><span class="num">Task 6.3</span><span class="time">10 min</span><span class="file">&#128736;&#65039; Cowork &middot; Iterate</span></div>
+  <h4>Ask Cowork to extend the workflow</h4>
+  <p>After the six deliverables are approved and sent, extend the workflow with a follow-up delegation. Try one of these:</p>
+  <div class="prompt">Cowork &mdash; based on the Audit Committee pack you just produced, also:
+1. Update the Enterprise Risk Register (01 Fabrikam_Enterprise_Risk_Register.xlsx) &mdash; increase the residual risk score for risk R-2024-018 (Patient Data Access) to reflect the confirmed control failure. Add an entry in the change log tab with today's date, the reason, and a reference to the audit report.
+2. Create a 30-day follow-up reminder in Outlook to check management action completion status &mdash; send me a summary email of any actions still Not Started or Overdue after 30 days.
+3. Draft a short Teams announcement (under 100 words) for the Risk &amp; Audit team channel &mdash; summarise the audit outcome and thank the control owners who cooperated with the fieldwork. Do not send &mdash; show me the draft.
+
+Show each artefact before finalising. Do not send the announcement without my approval.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout warn"><b>Boundaries for Cowork in audit work:</b> Cowork can produce deliverables and schedule meetings, but the Head of Internal Audit remains accountable for the audit opinion, the finding ratings, and the sign-off. Cowork is your junior auditor &mdash; you are the CAE. Never let it send the Audit Committee pack without your explicit review of every artefact.</div>
+</div>
+
 </div>
 </section>
 
