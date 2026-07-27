@@ -446,235 +446,101 @@ td a:hover{color:var(--accent2)}
 </section>
 
 <section id="ex1">
-<div class="modulehead"><div class="num">1</div><h2>Exercise 1 &middot; Copilot in Word<small>20 min &middot; Word &middot; Draft with Copilot</small></h2></div>
-<div class="callout good"><b>When to do this:</b> Session 3 opens with this exercise. Open <b>04 Fabrikam_Internal_Audit_Charter.docx</b>, <b>05 Fabrikam_Regulatory_Framework.docx</b>, and <b>06 Fabrikam_Prior_Year_Audit_Report.docx</b> from OneDrive before the exercise begins.</div>
+<div class="modulehead"><div class="num">1</div><h2>Exercise 1 &middot; Copilot in Word<small>15 min &middot; Word &middot; Draft with Copilot</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <b>04_Fabrikam_Internal_Audit_Charter.docx</b>, <b>05_Fabrikam_Regulatory_Framework.docx</b>, and <b>06_Fabrikam_Prior_Year_Audit_Report.docx</b> from OneDrive before you start.</div>
 
 <div class="card">
-<p class="lead">Use Copilot in Word to draft the Internal Audit Report for the FY2026 Patient Data Privacy Audit, grounded on three source documents. Copilot must cite every finding back to a specific source document and paragraph &mdash; no invented content.</p>
+<p class="lead">Use Copilot in Word to draft the FY2026 Patient Data Privacy Internal Audit Report, grounded on three source documents.</p>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 1</span><span class="time">18 min</span><span class="file">&#128196; Word Copilot &middot; Reference this document</span></div>
-  <h4>Draft the FY2026 Patient Data Privacy Internal Audit Report</h4>
-  <p>Open a blank Word document. In the Copilot pane, type <code>/</code> to reference each source document in turn. Then use the full prompt below. This is the hero prompt for this exercise &mdash; take your time to read the structure before pasting:</p>
+  <div class="head"><span class="num">Task 1</span><span class="time">15 min</span><span class="file">&#128196; Word Copilot &middot; Draft with Copilot</span></div>
+  <h4>Draft the audit report</h4>
+  <p>Open a blank Word document. In the Copilot pane, type <code>/</code> to reference each of the three source files. Then paste the prompt:</p>
+  <div class="prompt">Draft the FY2026 Patient Data Privacy Internal Audit Report for Fabrikam Healthcare, using the three files I just referenced.
 
-<div class="prompt">You are drafting the Internal Audit Report for Fabrikam Healthcare&apos;s FY2026 Patient Data Privacy Audit.
+Include: executive summary with the audit opinion, scope and methodology, control environment overview, detailed findings (each with rating, root cause, impact, and agreed action), and an appendix listing documents reviewed.
 
-AUDIENCE: Audit Committee, Chief Executive Officer, Chief Information Officer, Data Protection Officer.
+Cite the source file for every finding &mdash; do not invent anything. If evidence is missing, write [PLACEHOLDER &mdash; needs fieldwork evidence].
 
-STRUCTURE &mdash; produce the following sections in this exact order:
-
-1. EXECUTIVE SUMMARY (maximum 300 words)
-   Include: overall audit opinion (Satisfactory / Needs Improvement / Unsatisfactory), audit scope summary in two sentences, total findings count broken down by rating tier (Critical / High / Medium / Low), and the single most important recommendation for immediate action.
-
-2. SCOPE &amp; METHODOLOGY
-   Include: audit period covered, business units and systems reviewed, sampling approach and rationale, fieldwork dates, standards applied (reference IIA IPPF Standard 2200 &mdash; Engagement Planning and the Fabrikam Internal Audit Charter methodology section). Note any scope limitations or restrictions encountered.
-
-3. CONTROL ENVIRONMENT OVERVIEW
-   Summarise the adequacy of the design and operating effectiveness of controls over patient data privacy. Reference the relevant regulatory obligations from the Fabrikam Regulatory Framework (PDPA, clinical data handling requirements) and assess whether the control environment is adequate to meet those obligations.
-
-4. DETAILED FINDINGS
-   For each finding, include:
-   - Finding ID (format: F-2026-01, F-2026-02, etc.)
-   - Title (concise, noun-phrase format)
-   - Rating: Critical / High / Medium / Low &mdash; applied per the Fabrikam rating scale in the Internal Audit Charter
-   - Condition: what was observed, with evidence source (cite the specific document and section)
-   - Root Cause: why the control failed &mdash; classify as Design Gap / Operating Failure / Absence of Control
-   - Business Impact: the consequence if unresolved (regulatory fine under PDPA, patient data breach, reputational harm, accreditation risk)
-   - Management Response: agreed / partially agreed / disputed
-   - Agreed Action: specific remediation step, named owner (role title, not individual name), and target completion date
-
-5. AUDIT OPINION
-   State the overall opinion on the adequacy and effectiveness of controls over patient data privacy. Apply the Fabrikam rating scale.
-
-6. APPENDIX
-   List all documents reviewed, populations tested, samples selected, and sampling methodology applied.
-
-GROUNDING RULES &mdash; CRITICAL:
-- Reference only content found in the following documents: 04 Fabrikam_Internal_Audit_Charter.docx, 05 Fabrikam_Regulatory_Framework.docx, 06 Fabrikam_Prior_Year_Audit_Report.docx.
-- Do not invent findings, regulatory clauses, dates, control owners, or system names not present in those files.
-- Where specific fieldwork evidence is unavailable, insert: [PLACEHOLDER &mdash; requires fieldwork evidence from testing].
-- For every finding, cite the source document name and section title in parentheses.
-
-FINDINGS SUMMARY TABLE:
-After the Detailed Findings section, insert a table with columns:
-Finding ID | Title | Rating | Root Cause Category | Control Owner (Role) | Target Completion Date
-Apply conditional formatting guidance: Critical = red shading instruction, High = amber, Medium = yellow, Low = green.
-
-TONE: Independent, evidence-based, professional consulting standard. State findings as facts: &ldquo;The control failed to...&rdquo; &mdash; not &ldquo;it appears&rdquo; or &ldquo;it seems&rdquo;. This is an auditor&rsquo;s report, not a management narrative.
-
-ART DIRECTION: Apply Fabrikam Healthcare branding &mdash; navy header band (#0f2545), teal accent (#0e7490), Segoe UI typeface, professional consulting document layout with clear section numbering and consistent heading hierarchy.<button class="copy" onclick="cp(this)">Copy</button></div>
-
-  <div class="callout warn"><b>Watch out:</b> Word Copilot may hallucinate findings or regulatory clauses. Always require it to cite the specific source document paragraph. If a finding has no citation, delete it and add [PLACEHOLDER] before sharing the draft.</div>
-  <div class="callout good"><b>Why Word?</b> Native tables, tracked changes, and &ldquo;Reference this document&rdquo; grounding give you an audit-defensible draft. The source citation trail is built in &mdash; essential for an internal audit report that will be reviewed by the Audit Committee.</div>
-</div>
-
-<div class="activity">
-  <div class="head"><span class="num">Follow-up</span><span class="time">2 min</span><span class="file">&#128196; Word Copilot &middot; Same document</span></div>
-  <h4>Rewrite the Executive Summary for the Board</h4>
-  <p>After reviewing the full report draft, use this follow-up prompt to produce a Board-ready version of the executive summary:</p>
-  <div class="prompt">Rewrite the Executive Summary for the Board of Directors in plain English, 150 words maximum. Lead with the audit opinion (one word plus a single clarifying sentence). Follow with the most critical finding and its business impact. Close with the single most important recommendation and its target completion date. No technical jargon. No audit methodology language. Suitable for non-executive directors.<button class="copy" onclick="cp(this)">Copy</button></div>
+Tone: independent, evidence-based, audit committee-ready.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout warn"><b>Watch out:</b> If a finding has no citation, delete it or mark it [PLACEHOLDER] before you save. Save the file as <b>Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx</b> in OneDrive &mdash; Exercise 3 and Exercise 6 will reference it by name.</div>
 </div>
 
 </div>
 </section>
-
 <section id="ex2">
-<div class="modulehead"><div class="num">2</div><h2>Exercise 2 &middot; Copilot in Excel<small>20 min &middot; Excel &middot; Analyse data + charts</small></h2></div>
-<div class="callout good"><b>When to do this:</b> Open <b>01 Fabrikam_Enterprise_Risk_Register.xlsx</b> and <b>02 Fabrikam_Control_Testing_Results.xlsx</b> from OneDrive. Keep <b>03 Fabrikam_Incident_Log.xlsx</b> open in a second tab for Task 2.2.</div>
+<div class="modulehead"><div class="num">2</div><h2>Exercise 2 &middot; Copilot in Excel<small>15 min &middot; Excel &middot; Analyse data + charts</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <b>01_Fabrikam_Enterprise_Risk_Register.xlsx</b> from OneDrive. Make sure the data is formatted as an Excel Table (Insert &rarr; Table) before opening Copilot.</div>
 
 <div class="card">
-<p class="lead">Use Copilot in Excel to analyse the enterprise risk register, generate a risk heatmap and RAG dashboard, then cross-reference control testing failures against the incident log to produce an Audit Committee hot list.</p>
+<p class="lead">Use Copilot in Excel to analyse the enterprise risk register, flag above-appetite risks, and generate a heatmap.</p>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 2.1</span><span class="time">10 min</span><span class="file">&#128202; Excel Copilot &middot; 01 Fabrikam_Enterprise_Risk_Register.xlsx</span></div>
-  <h4>Refresh the enterprise risk register &mdash; heatmap and above-appetite flags</h4>
-  <p>Open <b>01 Fabrikam_Enterprise_Risk_Register.xlsx</b> from OneDrive. Open the Copilot panel (Home ribbon &rarr; Copilot). Ensure the data is formatted as an Excel Table before running the prompt (Insert &rarr; Table).</p>
-  <div class="prompt">Analyse the enterprise risk register in this workbook.
+  <div class="head"><span class="num">Task 2</span><span class="time">15 min</span><span class="file">&#128202; Excel Copilot &middot; 01_Fabrikam_Enterprise_Risk_Register.xlsx</span></div>
+  <h4>Analyse the risk register</h4>
+  <p>Open the file, open the Copilot pane (Home ribbon &rarr; Copilot), and paste:</p>
+  <div class="prompt">Analyse this enterprise risk register.
 
-1. Identify the top 10 risks by residual risk score (likelihood &times; impact). For each, show: Risk ID, Risk Title, Category, Likelihood score, Impact score, Residual Score, Risk Owner (role), and Risk Appetite threshold.
+Show me the top 10 risks by residual score, flag any risk that&rsquo;s above appetite in red, group risks by category with counts and averages, and generate a 5&times;5 heatmap with risks plotted by likelihood and impact.
 
-2. Group all risks by category (Clinical / Operational / Financial / Regulatory / Cyber / ESG). For each category, show: total risk count, number of above-appetite risks, and average residual score.
-
-3. Flag all risks where the residual risk score exceeds the defined risk appetite threshold. Highlight these rows in red and add a new column &ldquo;Above Appetite&rdquo; with value Yes / No.
-
-4. Generate a 5&times;5 risk heatmap chart using Likelihood (1&ndash;5) on the X-axis and Impact (1&ndash;5) on the Y-axis. Plot each of the top 10 risks as data points labelled by Risk ID. Use red shading for high-severity quadrants (score &ge;15), amber for medium (score 8&ndash;14), green for low (score &le;7).
-
-5. Produce a RAG summary table by category: Red = above appetite, Amber = at appetite, Green = below appetite. Include recommended escalation action for each Red category.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout"><b>Excel Copilot tip:</b> Works best on structured tables with consistent header rows. If Copilot does not detect the table, ensure all columns have headers and there are no blank rows within the data range.</div>
-</div>
-
-<div class="activity">
-  <div class="head"><span class="num">Task 2.2</span><span class="time">10 min</span><span class="file">&#128202; Excel Copilot &middot; 02 Fabrikam_Control_Testing_Results.xlsx + 03 Fabrikam_Incident_Log.xlsx</span></div>
-  <h4>Control testing analysis &mdash; produce the Audit Committee hot list</h4>
-  <p>Open <b>02 Fabrikam_Control_Testing_Results.xlsx</b>. In a second browser tab, open <b>03 Fabrikam_Incident_Log.xlsx</b>. Use Copilot in the control testing file with this prompt:</p>
-  <div class="prompt">Analyse the control testing results in this workbook.
-
-1. Calculate the overall pass rate for all controls tested. Then calculate the pass rate broken down by control family (Access Management / Change Management / Data Privacy / Financial Reporting Controls / Physical &amp; Environmental Security / IT Operations).
-
-2. List all controls that failed testing. Include for each: Control ID, Control Name, Control Family, Tester Name, Test Date, Failure Reason (from the testing notes column).
-
-3. Cross-reference with the incident log. Identify controls that BOTH (a) failed testing in this file AND (b) had a related operational or clinical incident recorded in the last 12 months in the incident log. Match on Control ID. Present the results as a &ldquo;Hot List&rdquo; table with columns:
-   Control ID | Control Name | Family | Test Result | Incident Count (last 12 months) | Most Recent Incident Date | Incident Description (brief) | Combined Priority
-
-4. Sort the Hot List by Combined Priority (controls with both a test failure and multiple incidents first). Highlight the top 5 rows in red &mdash; these are the controls that should be escalated to the Audit Committee as priority remediations.
-
-5. Add a summary box: total controls tested, pass rate, number of failures, and number of controls on the Hot List requiring Audit Committee escalation.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout warn"><b>Note:</b> Excel Copilot cannot invent data. If a control ID does not appear in the incident log, it will correctly show zero incidents &mdash; do not interpret absence as confirmation the control is low-risk. Cross-validate critical controls with the risk team.</div>
+Add a summary at the top: total risks, how many are above appetite, and which category has the most red flags.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>Tip:</b> If Copilot doesn&rsquo;t detect the data, check that the table has clean headers and no blank rows.</div>
 </div>
 
 </div>
 </section>
-
 <section id="ex3">
 <div class="modulehead"><div class="num">3</div><h2>Exercise 3 &middot; Copilot in PowerPoint<small>15 min &middot; PowerPoint &middot; Create from file</small></h2></div>
-<div class="callout good"><b>When to do this:</b> Your Word audit report from Exercise 1 must be saved to OneDrive as <b>Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx</b> before starting this exercise.</div>
+<div class="callout good"><b>When to do this:</b> Your Word audit report from Exercise 1 must be saved to OneDrive as <b>Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx</b> first.</div>
 
 <div class="card">
-<p class="lead">Use Copilot in PowerPoint to generate an Audit Committee presentation directly from your Word audit report, then improve the storyline into CFO reading order and add speaker notes.</p>
+<p class="lead">Use Copilot in PowerPoint to generate an Audit Committee deck directly from your Word audit report.</p>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 3.1</span><span class="time">10 min</span><span class="file">&#127381; PowerPoint Copilot &middot; Create presentation from file</span></div>
-  <h4>Generate the Audit Committee deck from the Word report</h4>
-  <p>Open a blank PowerPoint (powerpoint.com or desktop app). In the Copilot pane, use <b>Create presentation from file</b> or type <code>/</code> to reference the Word document saved in Exercise 1. Then use this prompt:</p>
-  <div class="callout" style="margin:0 0 10px">Use &ldquo;Copilot in PowerPoint &rarr; Create presentation from file&rdquo; or type <code>/</code> in the Copilot prompt box to browse and reference <b>Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx</b> from OneDrive.</div>
-  <div class="prompt">Create an Audit Committee presentation from the file /Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx.
+  <div class="head"><span class="num">Task 3</span><span class="time">15 min</span><span class="file">&#127381; PowerPoint Copilot &middot; Create presentation from file</span></div>
+  <h4>Generate the Audit Committee deck</h4>
+  <p>Open a blank PowerPoint. In the Copilot pane, click <b>Create presentation from file</b> or type <code>/</code> to reference your Word audit report from Exercise 1. Then paste:</p>
+  <div class="prompt">Create an Audit Committee presentation from the audit report I just referenced.
 
-Include the following slides in this structure:
-Slide 1: Title slide &mdash; &ldquo;FY2026 Patient Data Privacy Audit &mdash; Audit Committee Briefing&rdquo;. Include: presenter role (Head of Internal Audit, Fabrikam Healthcare), reference number, and a Fabrikam Healthcare logo placeholder.
-Slide 2: Agenda &mdash; list of slide sections with estimated discussion time for each.
-Slide 3: Audit Opinion &mdash; display the overall rating (Satisfactory / Needs Improvement / Unsatisfactory) in large bold text. Include a 2-sentence rationale and the findings count by rating tier (Critical / High / Medium / Low) in a simple table.
-Slide 4: Scope &amp; Methodology &mdash; bullet points: audit period, systems and business units reviewed, IIA IPPF standards applied, any scope limitations. Maximum 6 bullets.
-Slide 5: Control Environment Overview &mdash; include the risk heatmap visual (5&times;5 matrix) showing residual risk distribution. Label quadrants Red / Amber / Green.
-Slides 6+: Critical &amp; High Findings &mdash; one slide per Critical or High finding. Each slide must show: Finding ID, Title, Condition (one sentence), Root Cause Category, Business Impact (one sentence), Management Response, Agreed Action, Owner (role), and Target Date.
-Second-to-last slide: Management Action Tracker &mdash; a table of all agreed actions. Columns: Finding ID | Action Description | Owner (Role) | Target Date | Priority (Critical/High/Medium/Low).
-Last slide: Appendix &mdash; documents reviewed, populations tested, sample sizes.
+Include: title slide, agenda, audit opinion (big and bold), scope and methodology, control environment overview with a risk heatmap, one slide per Critical or High finding (finding ID, condition, root cause, impact, action, owner, target date), a management action tracker table, and an appendix.
 
-ART DIRECTION: Fabrikam Healthcare branding &mdash; navy (#0f2545) header band on every slide, teal (#0e7490) accents for callouts and highlights, Segoe UI typeface, executive committee style. Minimal text per slide &mdash; maximum 5 bullets per content slide. One clear visual or table per slide. No clip art or stock imagery.<button class="copy" onclick="cp(this)">Copy</button></div>
-</div>
-
-<div class="activity">
-  <div class="head"><span class="num">Task 3.2</span><span class="time">5 min</span><span class="file">&#127381; PowerPoint Copilot &middot; Same deck</span></div>
-  <h4>Improve storyline &mdash; CFO reading order and speaker notes</h4>
-  <p>After reviewing the generated deck, use this follow-up prompt to improve the executive narrative:</p>
-  <div class="prompt">Improve the storyline of this presentation for a CFO reading order: the CFO wants the audit opinion and the most critical risk first, then the supporting evidence, then the action plan.
-
-1. Reorder the slides so the Audit Opinion and Critical &amp; High Findings appear before the Scope &amp; Methodology detail.
-2. Add speaker notes to every slide. For each slide, the notes must include: (a) the key message in one sentence &mdash; what does the Audit Committee member take away from this slide? and (b) the most likely question an Audit Committee member will ask about this slide&rsquo;s content, with a suggested response from the Head of Internal Audit.
-3. Add a &ldquo;So what?&rdquo; banner at the bottom of each finding slide: a single sentence stating the business consequence if this finding is not remediated.<button class="copy" onclick="cp(this)">Copy</button></div>
+Apply Fabrikam Healthcare branding: navy header band (#0f2545), teal accents (#0e7490), Segoe UI. Minimal text per slide &mdash; one visual per slide. Add speaker notes on every slide with the key message and the most likely question from an Audit Committee member.<button class="copy" onclick="cp(this)">Copy</button></div>
 </div>
 
 </div>
 </section>
-
 <section id="ex4">
 <div class="modulehead"><div class="num">4</div><h2>Exercise 4 &middot; Copilot in Outlook &amp; Teams<small>15 min &middot; Outlook + Teams &middot; Incident triage &amp; meeting recaps</small></h2></div>
-<div class="callout good"><b>When to do this:</b> This exercise uses the simulated incident email thread and the Risk Committee meeting recording pre-loaded in the workshop tenant. No file download required.</div>
+<div class="callout good"><b>When to do this:</b> Uses the incident email thread and Risk Committee meeting recording pre-loaded in the workshop tenant. No files to download.</div>
 
 <div class="card">
-<p class="lead">Use Copilot in Outlook to triage a complex incident email thread and draft a formal audit response, then use Copilot in Teams to extract structured outputs from the weekly Risk Committee meeting recording.</p>
+<p class="lead">Use Copilot to triage an incident thread in Outlook, then extract structured actions from a Risk Committee meeting in Teams.</p>
 
 <div class="activity">
   <div class="head"><span class="num">Task 4.1 &middot; Outlook</span><span class="time">7 min</span><span class="file">&#128140; Outlook Copilot</span></div>
-  <h4>Triage the control failure incident thread</h4>
-  <p>In Outlook, open the email thread titled <b>&ldquo;URGENT: Control Failure &mdash; Patient Data Access &mdash; Incident REF-2026-042&rdquo;</b>. This is an 18-email thread involving the Head of Internal Audit, Control Owner (IT Security Manager), IT Infrastructure Lead, and the Data Protection Officer. Click <b>Copilot &rarr; Summarise this thread</b> or use this prompt:</p>
-  <div class="prompt">Summarise this email thread about the patient data access control failure incident.
+  <h4>Triage the control failure thread and draft a response</h4>
+  <p>Open the thread <b>&ldquo;URGENT: Control Failure &mdash; Patient Data Access &mdash; Incident REF-2026-042&rdquo;</b>. Click <b>Copilot &rarr; Summarise this thread</b>, then paste:</p>
+  <div class="prompt">Summarise this incident thread, then draft a formal reply from the Head of Internal Audit.
 
-Provide:
-1. A one-paragraph executive summary of the incident: what control failed, when it was first identified, who is involved, and what remediation actions have been taken to date.
-2. A chronological timeline of key events extracted from the thread (date, sender, key action or decision). Present as a numbered list.
-3. Outstanding questions and evidence gaps: what specific information has been requested but not yet received? Who is responsible for providing it?
-4. Current status: is the control now fully remediated, partially remediated, or still open?
+Summary: what failed, when, who&rsquo;s involved, timeline of key events, outstanding evidence gaps, current status.
 
-Tone: factual, precise, audit-appropriate. Do not editorialize or draw conclusions beyond what is in the thread.<button class="copy" onclick="cp(this)">Copy</button></div>
-
-  <p style="margin-top:12px">Then draft the formal audit response using this follow-up prompt:</p>
-  <div class="prompt">Draft a formal reply to this thread from the Head of Internal Audit.
-
-The reply must:
-1. Acknowledge receipt of the incident escalation and thank the Control Owner for the timely notification.
-2. Confirm that Internal Audit has opened a formal incident review under reference [REF-2026-042] and state that findings will be reported to the Audit Committee at the next scheduled meeting.
-3. State the three immediate next steps with owners and due dates: (a) request the full access log extract from IT Security within 3 business days, (b) request the signed control testing evidence and remediation plan from the Control Owner within 5 business days, (c) schedule a 30-minute fact-finding call with all parties within 5 business days.
-4. Remind all recipients that this correspondence is confidential and subject to internal audit privilege &mdash; it must not be forwarded outside the current distribution list without prior approval from the Head of Internal Audit.
-
-Tone: formal, direct, and professional. Maximum 200 words. Do not include pleasantries or filler sentences. This is official audit correspondence.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout warn"><b>Important:</b> Do not use Copilot to summarise email threads that contain whistleblower reports, matters under legal privilege, active regulatory investigations, or HR disciplinary proceedings. If you are uncertain whether a thread is privileged, contact Group Legal before using Copilot on it.</div>
-  <div class="callout"><b>Tip &mdash; use Coaching:</b> After Copilot drafts the reply, click <b>Coaching by Copilot</b> and select &ldquo;More formal&rdquo; and &ldquo;More concise&rdquo; to refine the tone for official audit correspondence.</div>
+Reply: acknowledge the escalation, confirm Internal Audit has opened a formal review under REF-2026-042, and set three next steps with owners and due dates (access log extract, remediation evidence, fact-finding call). Formal tone, under 200 words, no filler.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout warn"><b>Never use Copilot on:</b> whistleblower reports, legally privileged matters, active regulatory investigations, or HR disciplinary threads. If in doubt, check with Legal.</div>
 </div>
 
 <div class="activity">
   <div class="head"><span class="num">Task 4.2 &middot; Teams</span><span class="time">8 min</span><span class="file">&#128101; Teams Copilot &middot; Meeting recap</span></div>
-  <h4>Risk Committee meeting recap &mdash; extract action items and decisions</h4>
-  <p>In Teams, open the <b>Risk Committee</b> channel. Find the recording of the <b>Weekly Risk Committee Meeting</b> (most recent). Click on the meeting recording and open <b>Copilot</b> in the meeting recap view. Use this prompt:</p>
-  <div class="prompt">Provide a full structured recap of this Risk Committee meeting.
+  <h4>Extract actions from the Risk Committee meeting</h4>
+  <p>In Teams, open the <b>Risk Committee</b> channel and find the most recent <b>Weekly Risk Committee Meeting</b> recording. Open Copilot in the meeting recap view and paste:</p>
+  <div class="prompt">Give me a structured recap of this Risk Committee meeting.
 
-Include all of the following sections:
-1. ATTENDEES: List all attendees and note any key stakeholders who were absent.
-2. KEY DECISIONS: For each formal decision made during the meeting &mdash; state the context (what was being discussed), the decision reached, who proposed it, and who approved it.
-3. ACTION ITEMS: For each action item recorded &mdash; state the owner (by role, not name), the specific action required, the due date, and any dependencies or blockers noted.
-4. OPEN RISKS FLAGGED: List any new risks surfaced or escalated during the meeting, including Risk ID (if assigned), brief description, and the agreed next step.
-5. DEFERRED ITEMS: List any agenda items that were deferred to the next meeting, with the reason for deferral and the proposed date.
+Include: attendees (and who was absent), key decisions with the context around each, action items with owner-by-role and due date, any new or escalated risks, and any items deferred to the next meeting.
 
-Format as a structured document ready to be shared with Risk Committee members who were absent. Use clear headings and numbered lists throughout.<button class="copy" onclick="cp(this)">Copy</button></div>
-
-  <p style="margin-top:10px">Then query a specific risk decision using Copilot in the meeting:</p>
-  <div class="prompt">@Copilot &mdash; What was decided about risk R-2024-018 during this meeting? Who owns the mitigation action, and what is the agreed target completion date? Has the original mitigation deadline passed?<button class="copy" onclick="cp(this)">Copy</button></div>
-
-  <p style="margin-top:10px">Finally, draft the follow-up email to absent members:</p>
-  <div class="prompt">Draft an email to the Risk Committee members who were absent from today&rsquo;s meeting.
-
-The email must include:
-1. A brief opening (2 sentences) explaining the purpose of the email and that this is a summary of items requiring their attention.
-2. The top 3 decisions made at the meeting, with one sentence of context for each.
-3. Any action items assigned specifically to the absent members (by role) &mdash; with due dates.
-4. The date and Teams link for the next scheduled Risk Committee meeting.
-5. A note that the full meeting transcript and recording are available in the Risk Committee Teams channel.
-
-Tone: professional and concise. Maximum 250 words. Suitable for senior risk managers, control owners, and Audit Committee observers.<button class="copy" onclick="cp(this)">Copy</button></div>
+Then draft a short email to the members who were absent &mdash; the top 3 decisions, any actions assigned to them, and the next meeting date. Under 250 words.<button class="copy" onclick="cp(this)">Copy</button></div>
 </div>
 
 </div>
 </section>
-
 <section id="ex5">
 <div class="modulehead"><div class="num">5</div><h2>Exercise 5 &middot; Copilot Agent Builder<small>20 min &middot; Agent Builder &middot; Custom AI for RM/IA</small></h2></div>
 <div class="callout good"><b>When to do this:</b> Go to <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> &rarr; <b>Create</b> &rarr; <b>New Agent</b>. Facilitator will demonstrate building an agent live before you build your own.</div>
@@ -738,128 +604,68 @@ Tone: professional and concise. Maximum 250 words. Suitable for senior risk mana
 </section>
 
 <section id="ex6">
-<div class="modulehead"><div class="num">6</div><h2>Exercise 6 &middot; Copilot Cowork<small>25 min &middot; Cowork &middot; Delegate multi-step audit work end-to-end</small></h2></div>
-<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> and switch to <b>Cowork</b> mode from the mode selector at the top of the chat. Cowork will show its plan before it acts &mdash; approve each step, or let it run end-to-end while you observe.</div>
+<div class="modulehead"><div class="num">6</div><h2>Exercise 6 &middot; Copilot Cowork<small>20 min &middot; Cowork &middot; Delegate multi-step audit work end-to-end</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> and switch to <b>Cowork</b> mode. Cowork shows its plan before it acts &mdash; approve each step as it runs.</div>
 
 <div class="card">
-<p class="lead">Copilot <b>Cowork</b> is a multi-step agentic mode where you describe an <b>outcome</b> &mdash; and Copilot writes a plan, then executes across Word, Excel, PowerPoint, Outlook, Teams, and the browser to produce the deliverables. Instead of prompting one app at a time, you delegate the entire workflow. Perfect for the &ldquo;last mile&rdquo; of an audit engagement &mdash; where the report, deck, tracker, briefing page, sign-off email, and Audit Committee invite all need to land together.</p>
+<p class="lead">Cowork is a multi-step agentic mode where you describe an <b>outcome</b> &mdash; and Copilot writes a plan, then executes across Word, Excel, PowerPoint, Outlook, Teams, and the browser. Perfect for the &ldquo;last mile&rdquo; of an audit engagement.</p>
 
 <h4>What Cowork produces in this exercise</h4>
 <ul>
-  <li>&#128221; <b>Word</b> &mdash; a 1-page Audit Committee cover memo</li>
-  <li>&#128202; <b>Excel</b> &mdash; the management action tracker (findings, owners, due dates, status)</li>
-  <li>&#127912; <b>PowerPoint</b> &mdash; a 5-slide Audit Committee summary deck</li>
-  <li>&#127760; <b>HTML</b> &mdash; a Copilot Page shared to the Risk &amp; Audit Team channel as a live briefing</li>
-  <li>&#128231; <b>Email</b> &mdash; a sign-off request sent to the CFO, CIO, and DPO with the deliverables attached</li>
-  <li>&#128197; <b>Meeting</b> &mdash; the Audit Committee readout scheduled in Outlook with the deck attached and Teams link</li>
+  <li>&#128221; <b>Word</b> &mdash; 1-page Audit Committee cover memo</li>
+  <li>&#128202; <b>Excel</b> &mdash; management action tracker</li>
+  <li>&#127912; <b>PowerPoint</b> &mdash; 5-slide Audit Committee summary deck</li>
+  <li>&#127760; <b>HTML</b> &mdash; Copilot Page shared to the Risk &amp; Audit Team channel</li>
+  <li>&#128231; <b>Email</b> &mdash; sign-off request to CFO, CIO, and DPO</li>
+  <li>&#128197; <b>Meeting</b> &mdash; Audit Committee readout scheduled in Outlook with Teams link</li>
 </ul>
 
-<div class="callout"><b>Prerequisites:</b> Complete Exercises 1&ndash;4 first so the Word audit report, Excel control-testing results, and PowerPoint deck are already saved in your OneDrive. Cowork will reference them by name.</div>
+<div class="callout"><b>Prerequisites:</b> Complete Exercises 1&ndash;4 first so the Word report, Excel results, and PowerPoint deck are already saved in OneDrive.</div>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 6.1</span><span class="time">5 min</span><span class="file">&#128101; Cowork &middot; Plan</span></div>
-  <h4>Delegate the full Audit Committee close-out to Cowork</h4>
-  <p>In Copilot chat, switch mode to <b>Cowork</b>. Paste the prompt below. Cowork will read your files, propose a step-by-step plan across the 6 deliverables, and ask you to approve before it starts executing. Review the plan carefully &mdash; edit any step that is off, then approve.</p>
-  <div class="prompt">Cowork &mdash; close out the FY26 Patient Data Privacy Internal Audit and prepare the full Audit Committee readout package.
+  <div class="head"><span class="num">Task 6</span><span class="time">20 min</span><span class="file">&#128101; Cowork &middot; Plan &amp; execute</span></div>
+  <h4>Delegate the full Audit Committee close-out</h4>
+  <p>Switch mode to <b>Cowork</b> and paste:</p>
+  <div class="prompt">Cowork &mdash; close out the FY26 Patient Data Privacy Internal Audit and prepare the full Audit Committee readout pack.
 
-Reference these files in my OneDrive:
-- Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx (the full audit report I drafted in Exercise 1)
-- 02 Fabrikam_Control_Testing_Results.xlsx (control testing evidence)
-- 03 Fabrikam_Incident_Log.xlsx (12-month incident history)
-- 04 Fabrikam_Internal_Audit_Charter.docx (rating scale and methodology)
+Use these files from my OneDrive: Fabrikam_FY26_Patient_Data_Privacy_Audit_Report.docx, 02_Fabrikam_Control_Testing_Results.xlsx, 03_Fabrikam_Incident_Log.xlsx, 04_Fabrikam_Internal_Audit_Charter.docx.
 
-Produce all six deliverables below. Work through them in order, save each to my OneDrive in the folder "/Audits/FY26 Patient Data Privacy/Audit Committee Pack/", and show me each artefact before moving to the next step.
+Produce and save these to /Audits/FY26 Patient Data Privacy/Audit Committee Pack/:
+1. Word &mdash; 1-page cover memo (opinion, findings by rating, recommended action)
+2. Excel &mdash; management action tracker (one row per finding, with owner by role, target date, status, RAG conditional formatting)
+3. PowerPoint &mdash; 5 slides (title, opinion, findings chart, top 3 findings, ask of the Committee) with speaker notes
+4. HTML &mdash; a Copilot Page &ldquo;FY26 Patient Data Privacy Audit &mdash; Committee Briefing&rdquo; shared to the Risk &amp; Audit Team channel
+5. Email &mdash; sign-off request to CFO, CIO, DPO (do NOT send &mdash; show the draft)
+6. Meeting &mdash; 45-min Audit Committee readout in the next 10 business days, propose 3 slot options first, Teams link, agenda in the body
 
-1. WORD &mdash; Create "01 Audit Committee Cover Memo.docx". One page. From the Head of Internal Audit to the Audit Committee Chair. Sections: purpose, audit opinion (one word + one paragraph rationale), summary of findings by rating (count of Critical / High / Medium / Low), management response status, and recommended Committee action. Grounded strictly in the source audit report &mdash; do not invent findings, ratings, or dates.
-
-2. EXCEL &mdash; Create "02 Management Action Tracker.xlsx". Columns: Finding ID, Finding Title, Rating, Root Cause Category, Management Action, Action Owner (role), Target Date, Current Status (Not Started / In Progress / Complete / Overdue), % Complete, Last Update Note. Populate one row per finding extracted from the audit report. Add a summary tab with a pivot: count of actions by Status and by Rating. Apply conditional formatting: red for Overdue, amber for In Progress with due date in next 14 days, green for Complete.
-
-3. POWERPOINT &mdash; Create "03 Audit Committee Summary.pptx". Five slides: (1) Title &amp; Agenda, (2) Audit Opinion + rationale, (3) Findings by rating (chart from the tracker), (4) Top 3 findings (one bullet each: what/why/action/owner), (5) Ask of the Committee. Fabrikam Healthcare palette: navy #0f2545 header band, teal #0e7490 accent, Segoe UI, minimal text, one visual per slide. Add speaker notes with the key message and anticipated Committee question for each slide.
-
-4. HTML &mdash; Create a Copilot Page titled "FY26 Patient Data Privacy Audit &mdash; Committee Briefing". Embed: the audit opinion at the top, the findings-by-rating chart, a live-linked view of the action tracker, and a 3-bullet "what changed since last Committee" section. Share the page with the Risk &amp; Audit Team channel in Teams (view access) so members can follow the readout live.
-
-5. EMAIL &mdash; Draft in Outlook (do not send yet &mdash; show me the draft first). To: CFO, CIO, DPO. Cc: Head of Internal Audit, Audit Committee Chair. Subject: "Sign-off requested &mdash; FY26 Patient Data Privacy Audit &mdash; Audit Committee Pack". Body: 4 short paragraphs &mdash; purpose, deliverables attached, action requested (review and sign-off by [target date]), and escalation path if any deliverable is disputed. Attach the Word memo, Excel tracker, and PowerPoint deck. Tone: formal, audit-appropriate, maximum 180 words.
-
-6. MEETING &mdash; Schedule an Outlook meeting titled "Audit Committee Readout &mdash; FY26 Patient Data Privacy Audit". 45 minutes. Find a slot in the next 10 business days that works for the Audit Committee Chair, CFO, CIO, DPO, and Head of Internal Audit &mdash; propose the top 3 options first. Include a Teams link. Attach the PowerPoint deck and link to the Copilot Page. Agenda in the body: (1) audit opinion, (2) findings walkthrough, (3) management action commitments, (4) Committee questions, (5) formal sign-off.
-
-Rules for the whole plan:
-- Do not send the email or send the meeting invite until I explicitly approve each one &mdash; show drafts first.
-- Do not invent findings, dates, owners, or regulatory clauses. If information is missing from the source files, flag it and ask me before proceeding.
-- Cite the source file and section for every finding, rating, and date used.
-- Save each artefact with the exact filename above so they can be attached to the email and meeting.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout"><b>What Cowork will do:</b> It shows a numbered plan with the 6 steps, the tool it will use for each (Word, Excel, PowerPoint, Loop/Pages, Outlook mail, Outlook calendar), and a checkpoint after each step. Click <b>Approve plan</b> to start &mdash; or edit any step first.</div>
-  <div class="callout warn"><b>Watch for these checkpoints:</b> Cowork will pause and ask you to confirm before (a) sharing the HTML page to the Teams channel, (b) sending the sign-off email, and (c) sending the meeting invite. These are the three &ldquo;send&rdquo; actions with external impact &mdash; never let Cowork run past these without a human review.</div>
-</div>
-
-<div class="activity">
-  <div class="head"><span class="num">Task 6.2</span><span class="time">10 min</span><span class="file">&#9989; Cowork &middot; Review &amp; approve each step</span></div>
-  <h4>Review each artefact before Cowork moves on</h4>
-  <p>Cowork will produce each deliverable and pause. Use this checklist as you go &mdash; do not just click Approve.</p>
-  <ul>
-    <li><b>Word memo:</b> Does the audit opinion match the source report exactly? Are finding counts (Critical / High / Medium / Low) correct? Any invented dates or numbers?</li>
-    <li><b>Excel tracker:</b> Is every finding from the source report represented (no missing rows)? Are owners assigned by <em>role</em> not name? Does the conditional formatting work as expected?</li>
-    <li><b>PowerPoint deck:</b> Does the chart on slide 3 match the tracker? Are the top-3 findings on slide 4 actually the highest-rated (not the first 3)? Are speaker notes present?</li>
-    <li><b>HTML page:</b> Is the audit opinion legible above the fold? Is the tracker <em>linked</em> (live view) rather than pasted as a static screenshot? Is the sharing scope correct (Risk &amp; Audit team only, not org-wide)?</li>
-    <li><b>Email draft:</b> Is the recipient list correct (CFO / CIO / DPO in To, not Cc)? Are all three attachments present? Is the sign-off deadline stated?</li>
-    <li><b>Meeting invite:</b> Are all required attendees included? Is the Teams link present? Is the agenda in the body (not just the subject)?</li>
-  </ul>
-  <div class="callout good"><b>Approve, edit, or reject each step:</b> If a step is off, tell Cowork exactly what to change (e.g., &ldquo;Regenerate the Excel tracker &mdash; you missed finding F-07&rdquo;) and it will redo just that step without restarting the whole plan.</div>
-</div>
-
-<div class="activity">
-  <div class="head"><span class="num">Task 6.3</span><span class="time">10 min</span><span class="file">&#128736;&#65039; Cowork &middot; Iterate</span></div>
-  <h4>Ask Cowork to extend the workflow</h4>
-  <p>After the six deliverables are approved and sent, extend the workflow with a follow-up delegation. Try one of these:</p>
-  <div class="prompt">Cowork &mdash; based on the Audit Committee pack you just produced, also:
-1. Update the Enterprise Risk Register (01 Fabrikam_Enterprise_Risk_Register.xlsx) &mdash; increase the residual risk score for risk R-2024-018 (Patient Data Access) to reflect the confirmed control failure. Add an entry in the change log tab with today's date, the reason, and a reference to the audit report.
-2. Create a 30-day follow-up reminder in Outlook to check management action completion status &mdash; send me a summary email of any actions still Not Started or Overdue after 30 days.
-3. Draft a short Teams announcement (under 100 words) for the Risk &amp; Audit team channel &mdash; summarise the audit outcome and thank the control owners who cooperated with the fieldwork. Do not send &mdash; show me the draft.
-
-Show each artefact before finalising. Do not send the announcement without my approval.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout warn"><b>Boundaries for Cowork in audit work:</b> Cowork can produce deliverables and schedule meetings, but the Head of Internal Audit remains accountable for the audit opinion, the finding ratings, and the sign-off. Cowork is your junior auditor &mdash; you are the CAE. Never let it send the Audit Committee pack without your explicit review of every artefact.</div>
+Rules: don&rsquo;t invent findings, dates, or owners. Show me each deliverable before moving on. Do not send the email or the meeting invite until I say go.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout warn"><b>Watch these checkpoints:</b> Cowork will pause before (a) sharing the HTML page to Teams, (b) sending the email, (c) sending the meeting invite. Never let it past these without a human review.</div>
+  <div class="callout good"><b>You are still the CAE:</b> Cowork produces the deliverables, but you own the audit opinion and the sign-off. Review every artefact before approving.</div>
 </div>
 
 </div>
 </section>
-
 <section id="ex7">
 <div class="modulehead"><div class="num">7</div><h2>Exercise 7 &middot; Copilot Chat &middot; Daily Briefing Kanban<small>10 min &middot; Copilot Chat &middot; Your morning in one page</small></h2></div>
 <div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>. Make sure the mode selector shows <b>Work</b>. No files to attach &mdash; Copilot reads your email, Teams, calendar, and files automatically.</div>
 
 <div class="card">
-<p class="lead">The morning triage across Outlook, Teams, and your calendar takes 20 minutes. This exercise turns it into one prompt and one HTML page you can pin to a Teams tab or open on a second monitor. Run it every morning.</p>
+<p class="lead">Twenty minutes of morning triage across Outlook, Teams, and your calendar &mdash; compressed into one prompt and one HTML page you can pin to a Teams tab. Run it every morning.</p>
 
 <div class="activity">
-  <div class="head"><span class="num">Task 7.1</span><span class="time">5 min</span><span class="file">&#128172; Ask Copilot for your day</span></div>
-  <h4>Type this in Copilot Chat</h4>
-  <p>Just paste. No files needed &mdash; Copilot looks at your inbox, Teams, calendar, and recent files on its own.</p>
+  <div class="head"><span class="num">Task 7</span><span class="time">10 min</span><span class="file">&#128172; Copilot Chat &middot; Daily kanban</span></div>
+  <h4>Build your daily briefing kanban</h4>
+  <p>Paste the prompt. Edit the two bracketed lines to decide what goes on <em>your</em> board &mdash; then send.</p>
   <div class="prompt">Give me my daily briefing as a kanban board in HTML.
 
-Look at my email, Teams chats and channels, calendar, and recent files from the last 24 hours. Use 5 columns: Needs my decision today, In progress, Waiting on others, FYI, Closed yesterday.
+Look at [my email, Teams chats and channels, calendar, and recent files &mdash; add or remove sources as you like] from the last 24 hours.
+
+Use these columns [Needs my decision today, In progress, Waiting on others, FYI, Closed yesterday &mdash; edit or add columns to suit your role].
 
 Skip newsletters and auto-replies. For each card show: what it is, who&rsquo;s asking, when it&rsquo;s due, and what I should do next. Cite the email subject or Teams post so I can find it.
 
 Give me one self-contained HTML file I can save and open in a browser.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="callout"><b>Save it:</b> Copy the HTML into a file called <b>My_Daily_Briefing.html</b> on your desktop and double-click to open. That&rsquo;s your board for the day.</div>
-</div>
-
-<div class="activity">
-  <div class="head"><span class="num">Task 7.2</span><span class="time">3 min</span><span class="file">&#128269; Sanity check</span></div>
-  <h4>Quick review before you act on it</h4>
-  <ul>
-    <li>Pick 2 cards &mdash; can you find the exact email or Teams post from the citation?</li>
-    <li>Is anything urgent buried in the wrong column? Tell Copilot: <em>&ldquo;Move [item] to Needs my decision.&rdquo;</em></li>
-    <li>Any newsletters or noise sneaking through? Tell Copilot: <em>&ldquo;Remove newsletters and auto-replies and regenerate.&rdquo;</em></li>
-  </ul>
-</div>
-
-<div class="activity">
-  <div class="head"><span class="num">Task 7.3</span><span class="time">2 min</span><span class="file">&#128737;&#65039; Make it yours</span></div>
-  <h4>Try one follow-up</h4>
-  <p>Pick one &mdash; don&rsquo;t do all three.</p>
-  <div class="prompt">Add a column at the far left for anything from a C-level or anything marked urgent.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="prompt">Below the board, write a 2-minute stand-up script I can read to my team at 9am.<button class="copy" onclick="cp(this)">Copy</button></div>
-  <div class="prompt">Redo this as a Friday wrap-up covering the whole week instead of just today.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>Save it:</b> Copy the HTML into <b>My_Daily_Briefing.html</b> on your desktop and open it. That&rsquo;s your board for the day.</div>
   <div class="callout good"><b>Why this matters:</b> 20 minutes of triage becomes 90 seconds. Run it every Monday morning after a busy weekend and you&rsquo;ll never go back.</div>
 </div>
 
