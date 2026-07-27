@@ -156,6 +156,8 @@ td a:hover{color:var(--accent2)}
     <a href="#ex5">Exercise 5 &middot; Agent Builder</a>
     <a href="#ex6">Exercise 6 &middot; Copilot Cowork</a>
     <a href="#ex7">Exercise 7 &middot; Daily Briefing &middot; Kanban</a>
+    <a href="#ex8">Exercise 8 &middot; Researcher</a>
+    <a href="#ex9">Exercise 9 &middot; Analyst</a>
     <h3>Resources</h3>
     <a href="#files">Sample files</a>
     <a href="#tips">Tips &amp; prompts</a>
@@ -671,6 +673,56 @@ Give me one self-contained HTML file I can save and open in a browser.<button cl
 
 </div>
 </section>
+<section id="ex8">
+<div class="modulehead"><div class="num">8</div><h2>Exercise 8 &middot; Copilot Researcher<small>15 min &middot; Researcher agent &middot; Deep, cited research on a regulatory topic</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>. In the mode selector, choose <b>Researcher</b>. Researcher takes 5&ndash;10 minutes to run &mdash; kick it off and get a coffee while it works.</div>
+
+<div class="card">
+<p class="lead">Researcher is Copilot&rsquo;s deep-research agent. Give it a scoped question and it produces a structured, cited briefing pulled from public sources and (where enabled) your internal work &mdash; the kind of research memo that would take an analyst half a day.</p>
+
+<div class="activity">
+  <div class="head"><span class="num">Task 8</span><span class="time">15 min</span><span class="file">&#128218; Researcher &middot; Regulatory horizon scan</span></div>
+  <h4>Produce a horizon-scan briefing for the FY27 audit universe</h4>
+  <p>Switch mode to <b>Researcher</b> and paste:</p>
+  <div class="prompt">Prepare a briefing on emerging regulatory and technology risks that Fabrikam Healthcare&rsquo;s Internal Audit function should include in the FY27 audit universe.
+
+Focus on: PDPA amendments and enforcement trends in Malaysia and Singapore, AI use in clinical settings (diagnostic tools, patient-facing chatbots), cross-border patient data flows, and cybersecurity expectations for healthcare providers.
+
+For each risk area give me: what&rsquo;s changing, why it matters to a mid-size private healthcare group, what regulators are signalling, and 2&ndash;3 audit questions I could ask the business owner today.
+
+Cite every claim with a source I can click. Structure it as a 2-page briefing memo I can share with the Audit Committee.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>Tip:</b> Researcher will show a plan first &mdash; the sources it&rsquo;s planning to consult and the sections it&rsquo;ll produce. Review the plan and edit if any angle is missing before it runs.</div>
+  <div class="callout warn"><b>Verify before you use it:</b> Researcher is grounded and cited, but click through 3&ndash;4 citations before you circulate the memo &mdash; especially any specific dates, penalty amounts, or regulatory clauses.</div>
+</div>
+
+</div>
+</section>
+
+<section id="ex9">
+<div class="modulehead"><div class="num">9</div><h2>Exercise 9 &middot; Copilot Analyst<small>15 min &middot; Analyst agent &middot; Data analysis with Python, no formulas needed</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>. In the mode selector, choose <b>Analyst</b>. Attach <b>03_Fabrikam_Incident_Log.xlsx</b> from OneDrive.</div>
+
+<div class="card">
+<p class="lead">Analyst is Copilot&rsquo;s data-analysis agent &mdash; it writes and runs Python on your data in a sandbox. You describe the analysis in plain English; Analyst produces the answer, the chart, and the code (so you can defend the number if anyone asks how you got it).</p>
+
+<div class="activity">
+  <div class="head"><span class="num">Task 9</span><span class="time">15 min</span><span class="file">&#128200; Analyst &middot; 03_Fabrikam_Incident_Log.xlsx</span></div>
+  <h4>Find patterns in the incident log</h4>
+  <p>Switch mode to <b>Analyst</b>, attach the incident log, and paste:</p>
+  <div class="prompt">Analyse this 12-month incident log for Fabrikam Healthcare.
+
+Tell me: which root-cause categories are most common, whether incident volume is trending up or down over the year, which business units are generating the most High and Critical incidents, and how long incidents take to close (by severity).
+
+Then predict which control families are most at risk of failure in the next quarter based on the incident pattern &mdash; and explain the reasoning.
+
+Give me 3 charts I can drop straight into the Audit Committee deck, and a short paragraph interpreting each one.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>Tip:</b> Analyst shows the Python code it ran. If a number looks off, ask &ldquo;show me the code&rdquo; and check the filter logic &mdash; it&rsquo;s much faster than rebuilding the analysis in Excel.</div>
+  <div class="callout good"><b>Why Analyst over Excel Copilot?</b> Excel Copilot is great for structured tables and quick charts. Analyst is better when you want cross-tab analysis, predictions, or when you want to see the code behind the number for audit defensibility.</div>
+</div>
+
+</div>
+</section>
+
 <section id="files">
 <div class="modulehead"><div class="num">&#128193;</div><h2>Sample Files<small>Illustrative Fabrikam Healthcare data &mdash; workshop use only</small></h2></div>
 <div class="card">
