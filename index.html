@@ -761,7 +761,10 @@ Then flag these exceptions:
 - Categories you couldn&rsquo;t confidently map (confidence below 80%) &mdash; I&rsquo;ll review those manually
 - Duplicate risks that appear in more than one subsidiary under different names
 
-Give me: (1) the consolidated Group register as an Excel file, (2) an exception summary with counts by exception type and by subsidiary, and (3) a category-mapping table showing how each subsidiary&rsquo;s taxonomy maps to the Group taxonomy with confidence scores.<button class="copy" onclick="cp(this)">Copy</button></div>
+Give me: (1) the consolidated Group register as a downloadable Excel file with three sheets (Consolidated Register, Exception Summary, Category Mapping Table), (2) an exception summary with counts by exception type and by subsidiary, and (3) a category-mapping table showing how each subsidiary&rsquo;s taxonomy maps to the Group taxonomy with confidence scores.
+
+Apply light formatting on the Consolidated Register sheet: freeze the header row, colour the residual_band column (red / amber / green), and bold the header row.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>Getting the Excel file out:</b> Analyst shows results in the chat by default. To get a real .xlsx you can open in Excel, look for the &ldquo;Download&rdquo; link that appears below the code output &mdash; Analyst generates the file in its sandbox and gives you a link. If you don&rsquo;t see one, follow up with: <em>&ldquo;Save that as an .xlsx file I can download.&rdquo;</em> Analyst will regenerate with the export step included.</div>
   <div class="callout"><b>Tip:</b> Analyst will show its Python code. If a category mapping looks wrong, ask &ldquo;show me the mapping rules you used for [category]&rdquo; and adjust with a follow-up prompt like &ldquo;treat &lsquo;Data &amp; Privacy&rsquo; as Cyber &amp; Information, not as a standalone category.&rdquo;</div>
   <div class="callout good"><b>Why this matters:</b> This is the annual Group Risk consolidation exercise, done in 20 minutes instead of 2 weeks. Every mapping decision is documented in code, so the Audit Committee can see exactly how &ldquo;Human Capital&rdquo; (SG) became &ldquo;People &amp; Culture&rdquo; (Group). Defensible, repeatable, auditable.</div>
 </div>
