@@ -158,6 +158,7 @@ td a:hover{color:var(--accent2)}
     <a href="#ex7">Exercise 7 &middot; Daily Briefing &middot; Kanban</a>
     <a href="#ex8">Exercise 8 &middot; Researcher</a>
     <a href="#ex9">Exercise 9 &middot; Analyst</a>
+    <a href="#ex10">Exercise 10 &middot; Standardize &amp; Consolidate</a>
     <h3>Resources</h3>
     <a href="#files">Sample files</a>
     <a href="#tips">Tips &amp; prompts</a>
@@ -723,6 +724,51 @@ Give me 3 charts I can drop straight into the Audit Committee deck, and a short 
 </div>
 </section>
 
+<section id="ex10">
+<div class="modulehead"><div class="num">10</div><h2>Exercise 10 &middot; Copilot Analyst &middot; Standardize &amp; Consolidate<small>20 min &middot; Analyst agent &middot; Different schemas &rarr; one Group risk register</small></h2></div>
+<div class="callout good"><b>When to do this:</b> Open <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>. In the mode selector, choose <b>Analyst</b>. Attach all <b>5 files</b> from the <b>Subsidiary Risk Registers</b> folder before you start.</div>
+
+<div class="card">
+<p class="lead">Every year, Group Risk faces the same headache: four subsidiaries each send their risk register in a different format, with different rating scales, different category names, and different levels of completeness. In this exercise, Analyst does the reconciliation for you &mdash; standardize the schemas, map every risk to the Group enterprise taxonomy, and flag exceptions in one pass.</p>
+
+<h4>The 5 files you need (all in the Subsidiary Risk Registers folder)</h4>
+<ul>
+  <li>&#127973; <b>KL_Hospital_Risk_Register_FY26Q2.xlsx</b> &mdash; 25 risks, uses &ldquo;Risk Type&rdquo; taxonomy, numeric 1&ndash;5 likelihood &amp; consequence, inherent + residual scores</li>
+  <li>&#127974; <b>SG_Specialty_Clinics_Risk_Register_Q2_2026.xlsx</b> &mdash; 20 risks, uses &ldquo;Category&rdquo;, Low/Medium/High/Very High ratings, YYYY-MM-DD dates</li>
+  <li>&#127973; <b>JB_Regional_Risk_Register_July2026.xlsx</b> &mdash; 18 risks, compact schema, uses &ldquo;Domain&rdquo;, RAG only, some missing owners</li>
+  <li>&#128142; <b>Wellness_Clinics_Group_Risk_Log_July2026.xlsx</b> &mdash; 16 risks, uses &ldquo;Risk Theme&rdquo;, likelihood as percentages, financial impact as ranges</li>
+  <li>&#128218; <b>Group_Enterprise_Risk_Taxonomy_Reference.xlsx</b> &mdash; the <em>target</em> taxonomy (9 enterprise categories) and target reporting schema</li>
+</ul>
+
+<div class="activity">
+  <div class="head"><span class="num">Task 10</span><span class="time">20 min</span><span class="file">&#128200; Analyst &middot; Standardize + map + flag exceptions</span></div>
+  <h4>Consolidate the four subsidiaries into one Group risk register</h4>
+  <p>In <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a>, switch mode to <b>Analyst</b>, attach all 5 files, and paste:</p>
+  <div class="prompt">I&rsquo;ve attached 4 subsidiary risk registers (KL Hospital, SG Specialty Clinics, JB Regional, Wellness Clinics Group) and the Group Enterprise Risk Taxonomy Reference.
+
+Each subsidiary uses different column names, different rating scales, and different category taxonomies. Standardize them into one consolidated Group risk register, following the target schema in the taxonomy reference file.
+
+For every risk:
+- Map its local category (Risk Type / Category / Domain / Risk Theme) to one of the 9 enterprise categories in the reference file. Show your confidence for each mapping.
+- Normalize likelihood and impact into a consistent 1&ndash;5 scale.
+- Compute residual score (likelihood &times; impact) and residual band (Red &ge;15, Amber 8&ndash;14, Green &le;7).
+- Keep the source file name so we have an audit trail.
+
+Then flag these exceptions:
+- Risks above appetite (residual &ge;15)
+- Risks missing an owner
+- Risks with a target closure date that&rsquo;s already passed
+- Categories you couldn&rsquo;t confidently map (confidence below 80%) &mdash; I&rsquo;ll review those manually
+- Duplicate risks that appear in more than one subsidiary under different names
+
+Give me: (1) the consolidated Group register as an Excel file, (2) an exception summary with counts by exception type and by subsidiary, and (3) a category-mapping table showing how each subsidiary&rsquo;s taxonomy maps to the Group taxonomy with confidence scores.<button class="copy" onclick="cp(this)">Copy</button></div>
+  <div class="callout"><b>Tip:</b> Analyst will show its Python code. If a category mapping looks wrong, ask &ldquo;show me the mapping rules you used for [category]&rdquo; and adjust with a follow-up prompt like &ldquo;treat &lsquo;Data &amp; Privacy&rsquo; as Cyber &amp; Information, not as a standalone category.&rdquo;</div>
+  <div class="callout good"><b>Why this matters:</b> This is the annual Group Risk consolidation exercise, done in 20 minutes instead of 2 weeks. Every mapping decision is documented in code, so the Audit Committee can see exactly how &ldquo;Human Capital&rdquo; (SG) became &ldquo;People &amp; Culture&rdquo; (Group). Defensible, repeatable, auditable.</div>
+</div>
+
+</div>
+</section>
+
 <section id="files">
 <div class="modulehead"><div class="num">&#128193;</div><h2>Sample Files<small>Illustrative Fabrikam Healthcare data &mdash; workshop use only</small></h2></div>
 <div class="card">
@@ -770,6 +816,20 @@ Give me 3 charts I can drop straight into the Audit Committee deck, and a short 
     <td><span class="badge yellow">Word</span></td>
     <td>Exercise 1, Agent B</td>
     <td>FY2025 Patient Data Privacy Internal Audit Report &mdash; the prior-year equivalent of the report you will draft in Exercise 1. Contains: FY2025 audit opinion, scope, control environment assessment, 8 detailed findings (3 High, 4 Medium, 1 Low), management responses and agreed actions, and a follow-up status table showing which FY2025 actions were closed and which are still open. Approximately 40 pages.</td>
+  </tr>
+  <tr>
+    <td>07</td>
+    <td><b>Fabrikam_URGENT_Control_Failure_REF-2026-042.eml</b></td>
+    <td><span class="badge blue">Outlook</span></td>
+    <td>Exercise 4</td>
+    <td>18-message .eml file simulating the URGENT control failure email thread (Patient Data Access &mdash; Incident REF-2026-042). Involves the Head of Internal Audit, IT Security Manager, IT Infrastructure Lead, DPO, EA, and Head of Clinical Operations KL. Covers the full incident arc from SIEM alert to CEO briefing consolidation. Double-click to open in Outlook.</td>
+  </tr>
+  <tr>
+    <td>08</td>
+    <td><b>Subsidiary Risk Registers\ (folder of 5 files)</b></td>
+    <td><span class="badge blue">Excel</span></td>
+    <td>Exercise 10</td>
+    <td>Four subsidiary risk registers with <em>deliberately different</em> schemas plus the target Group taxonomy: KL_Hospital_Risk_Register_FY26Q2.xlsx (25 risks, &ldquo;Risk Type&rdquo;, 1&ndash;5 numeric), SG_Specialty_Clinics_Risk_Register_Q2_2026.xlsx (20 risks, &ldquo;Category&rdquo;, Low/Med/High/Very High), JB_Regional_Risk_Register_July2026.xlsx (18 risks, &ldquo;Domain&rdquo;, RAG only), Wellness_Clinics_Group_Risk_Log_July2026.xlsx (16 risks, &ldquo;Risk Theme&rdquo;, percentages + ranges), and Group_Enterprise_Risk_Taxonomy_Reference.xlsx (target taxonomy + target schema). Same underlying risks appear under different names across files &mdash; perfect for testing Analyst&rsquo;s cross-file standardization and category mapping.</td>
   </tr>
 </table>
 <div class="callout warn" style="margin-top:14px"><b>Note on sample data:</b> These files contain entirely fictitious risk, control, and incident data created for this workshop. They do not represent real Fabrikam Healthcare operations, real patients, or real regulatory matters. A follow-up task will generate the actual sample data files &mdash; reference them by name in exercises now.</div>
